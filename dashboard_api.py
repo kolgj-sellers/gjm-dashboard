@@ -34,20 +34,20 @@ GJM_CONFIG = {
 
     # Origins të lejuara (GitHub Pages URL juaj)
     # Shembull: ["https://yourusername.github.io", "http://localhost:8080"]
-    "allowed_origins": os.getenv("ALLOWED_ORIGINS", "*").split(","),
+    "allowed_origins": os.getenv("ALLOWED_ORIGINS", "https://kolgj-sellers.github.io,http://localhost:8080,http://localhost:5500").split(","),
 
     # Connection strings për SQL Server
     # Nëse serveri përdor Windows Auth: Trusted_Connection=yes
     # Nëse përdor SQL Auth: User ID=sa;Password=xxx
     "mall_db": os.getenv("MALL_DB",
         "Driver={ODBC Driver 17 for SQL Server};"
-        "Server=YOUR_SQL_SERVER_HERE;"          # <-- ndrysho
+        "Server=SQLNODE1\\SQLAG1;"
         "Database=GjirafaMallDb;"
         "Trusted_Connection=yes;"
     ),
     "merchant_db": os.getenv("MERCHANT_DB",
         "Driver={ODBC Driver 17 for SQL Server};"
-        "Server=YOUR_SQL_SERVER_HERE;"          # <-- ndrysho
+        "Server=SQLNODE1\\SQLAG1;"
         "Database=GjirafaMerchantDb;"
         "Trusted_Connection=yes;"
     ),
